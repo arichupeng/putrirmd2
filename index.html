@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Story</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            transition: background 1s ease;
+            text-align: center;
+            color: white;
+        }
+        h1, p {
+            margin: 10px;
+            padding: 0 20px;
+            background: rgba(0, 0, 0, 0.5); /* Transparansi untuk teks */
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #page1 {
+            background: url('https://source.unsplash.com/1600x900/?night,stars') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page2 {
+            background: url('https://source.unsplash.com/1600x900/?sunset,ocean') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page3 {
+            background: url('https://source.unsplash.com/1600x900/?sky,mountain') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page4 {
+            background: url('https://source.unsplash.com/1600x900/?forest,moon') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page5 {
+            background: url('https://source.unsplash.com/1600x900/?lake,sunset') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page6 {
+            background: url('https://source.unsplash.com/1600x900/?stars,galaxy') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #page7 {
+            background: url('https://source.unsplash.com/1600x900/?night,city') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .hidden {
+            display: none;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 15px 30px; /* Ukuran tombol lebih besar */
+            background-color: rgba(255, 255, 255, 0.9); /* Warna tombol lebih terang */
+            color: #2c3e50;
+            border: none;
+            cursor: pointer;
+            font-size: 18px; /* Teks tombol lebih besar */
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan agar tombol terlihat lebih jelas */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.05); /* Efek zoom ketika di hover */
+        }
+        .emoji {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+
+    <div id="page1">
+        <h1>🌙 Selamat Malam Kamu yang sedang Saya Tunggu</h1>
+        <button class="button" onclick="nextPage()">Buka Put</button>
+    </div>
+
+    <div id="page2" class="hidden">
+        <h1>⏳ Aku belajar tentang artinya menunggu</h1>
+        <p>Tentang rasa sabar, tentang berjuang 💪</p>
+        <button class="button" onclick="nextPage()">Lanjutkan 💌</button>
+    </div>
+
+    <div id="page3" class="hidden">
+        <h1>📖 Baca nya pelan pelan ya,...</h1>
+        <p>Semoga kamu akan bisa merima kekurangan diri ini yang jauh dari kata anak baik-baik</p>
+        <p>💔 Tidak memandang kelebihan dan kekurangnya</p>
+        <button class="button" onclick="nextPage()">Lanjutkan 💬</button>
+    </div>
+
+    <div id="page4" class="hidden">
+        <h1>😔 Saya jauh dari kata sempurna</h1>
+        <p>Hanya seorang manusia yang penuh dengan masa kelamnya</p>
+        <button class="button" onclick="nextPage()">Lanjutkan 💭</button>
+    </div>
+
+    <div id="page5" class="hidden">
+        <h1>🌟 You will always be my favorite person 💖</h1>
+        <button class="button" onclick="nextPage()">Lanjutkan 💫</button>
+    </div>
+
+    <div id="page6" class="hidden">
+        <h1>⚠️ Jangan sakiti dirimu karena masa laluMu mungkin itu indah</h1>
+        <p>Namun ada lembaran kosong yang harus di isi ada judul baru yang kamu tulis kembali ✍️</p>
+        <p>Entah skenario itu akan baik atau buruk 🎥</p>
+        <button class="button" onclick="nextPage()">Lanjutkan 📝</button>
+    </div>
+
+    <div id="page7" class="hidden">
+        <h1>💌 I hope you can open your heart again</h1>
+        <p>Without having to wait to erase your past.. ❤️‍🩹</p>
+        <p>Here there is someone waiting for your love 🌹</p>
+    </div>
+
+    <script>
+        let currentPage = 1;
+
+        function nextPage() {
+            // Hide the current page
+            document.getElementById('page' + currentPage).classList.add('hidden');
+            
+            // Show the next page
+            currentPage++;
+            if (currentPage <= 7) {
+                document.getElementById('page' + currentPage).classList.remove('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
